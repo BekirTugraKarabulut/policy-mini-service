@@ -9,4 +9,6 @@ public interface PolicyRepository extends JpaRepository<Policy,Long> {
 
     Policy findByPolicyId(Long policyId);
 
+    Policy findByStatus(String status);
+
 }

@@ -1,6 +1,7 @@
 package com.example.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,6 +11,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "policy")
+@Schema(description = "policy bilgileri")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,6 +24,9 @@ public class Policy {
 
     @Column(name = "musteri_id")
     private int musteriId;
+
+    @Column(name = "status")
+    private String status;
 
     @Column(name = "urun_id")
     private Integer urunId;

@@ -1,11 +1,16 @@
 package com.example.controller;
 
-import com.example.dto.DtoPolicy;
-import com.example.dto.DtoPolicyUI;
+import com.example.dto.*;
 
 import java.util.List;
 
 public interface PolicyController {
+
+    public DtoCollection getCollectionStatusByPolicyId(Long policyId);
+
+    public DtoUrun getProductByProductId(Integer urunId);
+
+    public DtoMusteri getMusteriByTckn(String tckn);
 
     public List<DtoPolicy> allPolicies();
 
@@ -17,5 +22,10 @@ public interface PolicyController {
 
     public void deletePolicy(Long policyId);
 
+    public DtoPolicy durumPolicyById(Long policyId);
+
+    public List<DtoCollection>  odenmeDurumuFalseByPolicyId(Long policyId);
+
+    public DtoCollection durumCollection(Integer collectionId , DtoCollectionUI dtoCollectionUI);
 
 }
