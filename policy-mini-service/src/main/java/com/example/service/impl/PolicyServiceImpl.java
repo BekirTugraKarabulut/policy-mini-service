@@ -194,5 +194,17 @@ public class PolicyServiceImpl implements PolicyService {
         return collectionServiceFeign.guncelle(dtoCollection.getCollectionId(), dtoCollectionUI);
     }
 
+    @Override
+    public List<DtoCollection> odenmemisVeSuresiDolmusCollectionListesi() {
+
+        List<DtoCollection> dtoCollections = collectionServiceFeign.suresiDolmusVeOdenmemislerinTumu();
+
+        if (dtoCollections.isEmpty()) {
+            return null;
+        }
+
+        return dtoCollections;
+    }
+
 
 }

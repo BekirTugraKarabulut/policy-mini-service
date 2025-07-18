@@ -26,4 +26,7 @@ public interface CollectionServiceFeign {
     @PutMapping(path = "/rest/api/collection-guncelle/{collectionId}")
     DtoCollection guncelle(@PathVariable(name = "collectionId" , required = true) Integer collectionId,@RequestBody DtoCollectionUI dtoCollectionUI);
 
+    @GetMapping(path = "/rest/api/suresi-dolmus-ve-odenmemislerin-tumu")
+    List<DtoCollection> suresiDolmusVeOdenmemislerinTumu();
+
 }

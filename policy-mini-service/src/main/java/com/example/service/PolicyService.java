@@ -28,4 +28,6 @@ public interface PolicyService {
 
     public DtoCollection durumCollection(Integer collectionId , DtoCollectionUI dtoCollectionUI);
 
+    public List<DtoCollection> odenmemisVeSuresiDolmusCollectionListesi();
+
 }

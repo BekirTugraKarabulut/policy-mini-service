@@ -83,5 +83,10 @@ public class PolicyControllerImpl implements PolicyController {
         return policyService.durumCollection(collectionId,dtoCollectionUI);
     }
 
+    @Override
+    @GetMapping(path = "/collection-suresi-gecmis-ve-odenmemis")
+    public List<DtoCollection> odenmemisVeSuresiDolmusCollectionListesi() {
+        return policyService.odenmemisVeSuresiDolmusCollectionListesi();
+    }
 
 }
